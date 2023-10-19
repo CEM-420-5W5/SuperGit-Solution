@@ -213,7 +213,25 @@ namespace SuperProjet.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("SuperProjet.Models.Problems", b =>
+            modelBuilder.Entity("SuperProjet.Models.Conflit", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Boom")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Conflit");
+                });
+
+            modelBuilder.Entity("SuperProjet.Models.Problem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -228,7 +246,7 @@ namespace SuperProjet.Migrations
                     b.ToTable("Problems");
                 });
 
-            modelBuilder.Entity("SuperProjet.Models.Trucs", b =>
+            modelBuilder.Entity("SuperProjet.Models.Truc", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

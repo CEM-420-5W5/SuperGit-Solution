@@ -51,6 +51,20 @@ namespace SuperProjet.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Conflit",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Description = table.Column<string>(type: "TEXT", nullable: false),
+                    Boom = table.Column<bool>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Conflit", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Problems",
                 columns: table => new
                 {
@@ -237,6 +251,9 @@ namespace SuperProjet.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Conflit");
 
             migrationBuilder.DropTable(
                 name: "Problems");
