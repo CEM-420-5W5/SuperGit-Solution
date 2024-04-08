@@ -6,5 +6,7 @@
         public string Description { get; set; } = "";
         public bool Boom { get; set; }
         public bool AUTRE { get; set; }
+
+        public bool AUTRE2 { get; set; }
     }
 }
